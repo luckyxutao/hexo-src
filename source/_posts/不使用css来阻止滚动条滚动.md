@@ -13,10 +13,10 @@ tags:
    
 
 > * 给body添加overflow，隐藏滚动条。缺点：视觉上出现页面左右晃动,体验差。
-> * 给body绑定mousewheel事件，如果当前是在目标元素，则阻止默认行为
+> * 给body绑定mousewheel事件，如果当前是在目标元素，则阻止默认行为。缺点：不够优雅
+> * 给子元素mousewheel事件加上return false(兼容ie6)。缺点：无
 
-这里主要说明下第二种解决方案      
-
+##第二种解决方案
 <!-- more -->
           
 ```javascript
@@ -31,4 +31,16 @@ tags:
 	this._$window.on('mouseleave',function(){
 		$body.off('mousewheel',stopScroll);
 	});
+```
+
+##第三种方案
+
+```javascript
+//鼠标滚动时逻辑处理
+_mouseWheelHandler: function(event, delta, deltaX, deltaY) {
+	if (this._cacheFuncProxyer('hasScrollBar')) {
+		this._execScrolling(delta * -1, delta * this._getGap());
+	}
+	return false
+}
 ```
