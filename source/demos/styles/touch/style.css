@@ -22,8 +22,12 @@
 	a:link,a:visited,a:hover { color:#4C4C4C; text-decoration:none; }
 	.blue { color: #0086CE; }
 	a.blue:link, a.blue:visited, a.blue:hover { color:#0086CE; text-decoration:none; }
+	.green { color: #48b59a; }
+	a.green:link, a.green:visited, a.green:hover { color:#48b59a; text-decoration:none; }
 	.grey { color:#9C9C9C; }
 	a.grey:link, a.grey:visited, a.grey:hover { color:#9C9C9C; text-decoration:none; }
+	.new_grey { color:#999; }
+	a.new_grey:link, a.new_grey:visited, a.new_grey:hover { color:#999; text-decoration:none; }
 	.orange { color:#F60; }
 	a.orange:link,a.orange:visited,a.orange:hover{color:#F60;text-decoration:none }
 
@@ -60,7 +64,7 @@
 	.nav { background: url(./images/header_bg.jpg); height: 32px; text-align:center; font-size:19px; padding:8px 10px 8px 0; }
 	.nav .name {display:inline-block; height:30px; overflow:hidden; white-space:nowrap; width:50%;}
 	
-	/*.hdc { padding:10px 10px 0; background: url(./images/nav_b_line.png) repeat-x 0 100%; margin-bottom:10px; }
+	/*.hdc { padding:10px 10px 0;margin-bottom:10px; }
 	.hdc h2 { float: left; padding: 0 20px 8px 10px; }
 	.user_fun { }
 	.user_fun li { float:right; padding:15px 5px 20px; }
@@ -137,7 +141,7 @@
 	.sec_code { padding:10px; color:#999; }
 	.sec_code .px { color:#999; }
 	
-/*----- viewthread -----*/
+/*----- viewthread -----
 	.postlist h2 { clear:both; font-size:16px; line-height:1.5em; font-weight:bold; margin:5px 10px 0 10px; }
 	.plc { border-bottom:1px solid #D9D8D8; overflow:hidden; position:relative; }
 	.plc .avatar { position:absolute; left:10px; top:9px; display:inline; }
@@ -159,7 +163,7 @@
 	.fastpost .input { width:100%; height:34px; text-indent:7px; margin-top:2px; border:1px solid #D9D8D8; } 
 	.search { padding:7px 10px;}
 	.search .input { width:100%; height:30px; text-indent:7px; margin-top:2px; border:1px solid #D9D8D8;}
-		
+	*/	
 /*----- pop -----*/	
 	.tip { width:300px; height:180px; background: url(./images/pic_bg.jpg) repeat; margin:0 auto;border:1px solid #D7D7D7; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;text-align:center;
 	}

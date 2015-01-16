@@ -24,9 +24,9 @@
 	margin-top: 4px
 }
 .bm_h {
-	height: 70px;
+	height: 36px;
 	background: #F0FAF6;
-	line-height: 70px;
+	line-height: 36px;
 	white-space: nowrap;
 	overflow: hidden;
 	border-bottom: 1px solid #D0D5D4
@@ -48,27 +48,18 @@
 	background: #FFF;
 }
 .sub_forum dl {
-	padding: 1.6% 1% 0% 2%;
-	height: 21%;
+	padding: 20px 0 20px 18px;
 	font-size: 16px;
 	border-bottom: 1px solid #EDEDED;
 	overflow: hidden
 }
 .sub_forum  dt {
-	position: relative;
-	width: 9.5%;
+	width:7%;
 	
 }
 .sub_forum  dd {
-	width: 88%;
+	width:92%;
 	
-}
-.sub_forum .icon-box {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: url(../images/bbs-new/diqiu.jpg) no-repeat;
-	background-size: 100%
 }
 .sub_forum dd .tit {
 	font-size: 16px;
@@ -82,19 +73,3 @@
 	color: #a0a0a0;
 }
 .sub_forum dl:last-child { border-bottom:none;}
-@media screen and (min-width:640px) {
-	.bm_h h2 a {
-		font-size: 28px
-	}
-}
-@media screen and (min-width:640px) {
-	.bm_h .tiezi-sum {
-		font-size: 24px
-	}
-}
-@media screen and (min-width:640px) {
-	.sub_forum dd .tit {
-		font-size: 32px;
-		font-weight: 400
-	}
-}
