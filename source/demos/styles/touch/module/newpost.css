@@ -1,0 +1,29 @@
+.new_post_from{}
+.new_post_from .e_hd{position: relative;padding:7px 0;background-color: #f0faf6;border-bottom: solid 1px #d0d5d4;}
+.new_post_from .e_hd .l{position:absolute;left: 0;top: 7px;}
+.new_post_from .e_hd .r{margin-left: 103px;margin-right: 7px;height: 31px;}
+.new_post_from .e_hd .tags-label{height: 31px; line-height: 31px;color: #bababa;cursor: pointer;}
+.new_post_from .e_hd .tags-ipt {border:1px solid #e0e0e0;}
+.new_post_from .e_hd .tags-ipt input{width:100%;height: 29px; line-height: 29px;border:none 0;text-indent: 7px;}
+
+.new_post_from .e_title{position: relative;border-bottom: solid 1px #e0e0e0;padding-bottom: 14px;}
+.new_post_from .e_title .txtarea{padding:5px;padding-bottom: 0;}
+.new_post_from .e_title textarea {width: 100%;border: none;outline: none;resize:none;}
+.new_post_from .e_title .wordcount{width: 120px;position: absolute;right: 0;bottom: 0;color: #d3d3d3;}
+.new_post_from .focusin textarea{color: #333333;}
+.new_post_from .focusin .wordcount{color: #999999;}
+
+.new_post_from .e_content{padding:5px;border-bottom: solid 1px #e0e0e0} 
+.new_post_from .e_content textarea{width: 100%;border: none;outline: none;resize:none;} 
+
+.new_post_from .e_post_imglist{position: relative;padding:10px;padding-bottom:90px;background-color: #f0faf6}
+.new_post_from .e_post_imglist li{position: relative; float: left;margin-right: 10px;margin-bottom:10px;}
+.new_post_from .e_post_imglist li img{display: block;}
+.new_post_from .e_post_imglist li .p_img{display: block;}
+.new_post_from .e_post_imglist li .del{position: absolute;right: -7px;top: -7px}
+
+
+.new_post_from .select_a {margin:0px;padding:0 15px;border:0;display:inline-block;position:relative;width:80px;height:31px;line-height:31px;text-align:left;border-right: solid 1px #d0d5d4;padding-right: 0;}
+.new_post_from .select_a .icon{display: inline-block; position: absolute;right: 10px;}
+.new_post_from .select_a select{position:absolute;left:0;top:0;height:31px;border:solid 1px #ccc;opacity:0;width:100px;}
+.new_post_from .select_a span{font-size: 14px;}

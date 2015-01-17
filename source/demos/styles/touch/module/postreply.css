@@ -1,0 +1,25 @@
+.new_post_reply{}
+.new_post_reply .e_hd{padding:10px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 16px;color: #333;}
+
+.new_post_reply .e_quote{padding: 7px 12px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 12px} 
+.new_post_reply .e_quote dt{margin-bottom: 3px; color: #999999} 
+.new_post_reply .e_quote .icon{display: inline-block;position: relative;top:-5px;} 
+.new_post_reply .e_quote .icon img{display: block;} 
+.new_post_reply .e_quote dt .icon{margin-right:3px;} 
+.new_post_reply .e_quote dd .icon{margin-left:3px;} 
+.new_post_reply .e_quote dd{color: #666666;line-height: 1.6em;} 
+
+.new_post_reply .e_content{padding:5px;border-bottom: solid 1px #e0e0e0} 
+.new_post_reply .e_content textarea{width: 100%;border: none;outline: none;resize:none;} 
+
+.new_post_reply .e_post_imglist{position: relative;padding:10px;padding-bottom:90px;background-color: #f0faf6}
+.new_post_reply .e_post_imglist li{position: relative; float: left;margin-right: 10px;margin-bottom:10px;}
+.new_post_reply .e_post_imglist li img{display: block;}
+.new_post_reply .e_post_imglist li .p_img{display: block;}
+.new_post_reply .e_post_imglist li .del{position: absolute;right: -7px;top: -7px}
+
+
+.new_post_reply .select_a {margin:0px;padding:0 15px;border:0;display:inline-block;position:relative;width:80px;height:31px;line-height:31px;text-align:left;border-right: solid 1px #d0d5d4;padding-right: 0;}
+.new_post_reply .select_a .icon{display: inline-block; position: absolute;right: 10px;}
+.new_post_reply .select_a select{position:absolute;left:0;top:0;height:31px;border:solid 1px #ccc;opacity:0;width:100px;}
+.new_post_reply .select_a span{font-size: 14px;}
