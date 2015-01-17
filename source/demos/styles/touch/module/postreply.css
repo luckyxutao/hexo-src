@@ -1,7 +1,7 @@
 .new_post_reply{}
-.new_post_reply .e_hd{padding:10px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 16px;color: #333;}
+.new_post_reply .e_hd{padding:10px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 18px;color: #333;}
 
-.new_post_reply .e_quote{padding: 7px 12px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 12px} 
+.new_post_reply .e_quote{padding: 7px 12px; background-color: #f0faf6;border-bottom: solid 1px #e0e0e0;font-size: 14px} 
 .new_post_reply .e_quote dt{margin-bottom: 3px; color: #999999} 
 .new_post_reply .e_quote .icon{display: inline-block;position: relative;top:-5px;} 
 .new_post_reply .e_quote .icon img{display: block;} 
