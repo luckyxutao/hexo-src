@@ -1,7 +1,7 @@
 title: 不使用css来阻止滚动条滚动
 date: 2014-11-19 15:25:51
 categories:
-- javascript
+- 前端
 tags:
 - scroll
 - 滚动条

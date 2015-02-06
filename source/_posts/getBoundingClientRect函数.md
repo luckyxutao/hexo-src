@@ -1,7 +1,7 @@
 title: getBoundingClientRect函数
 date: 2014-11-20 16:54:22
 categories:
-- javascript
+- 前端
 ---
 
 

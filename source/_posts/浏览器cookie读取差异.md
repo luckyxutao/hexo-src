@@ -1,11 +1,14 @@
 title: 浏览器cookie读取差异
 date: 2015-01-10 21:31:42
+categories:
+- 前端
 tags:
+- cookie
 ---
 
 这三种浏览器对cookie的path信息的存储与操作是不同的
 
-
+<!-- more -->
 比如，访问http://www.example.com/api/index.html
 
 服务器的Set-Cookie头没有设置path信息，

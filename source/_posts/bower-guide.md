@@ -1,6 +1,9 @@
 title: Getting Started with Bower
 date: 2015-01-09 20:56:27
-tags:
+categories:
+- 前端
+tags: 
+- bower
 ---
 
 ##bower组件管理，一个不错的入门教程。##

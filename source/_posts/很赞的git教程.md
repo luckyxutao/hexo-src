@@ -1,7 +1,7 @@
 title: 一个非常不错的git教程
 date: 2014-11-17 23:07
 categories:
-- 档案
+- 前端
 tags:
 - git
 ---
