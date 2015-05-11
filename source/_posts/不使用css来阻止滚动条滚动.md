@@ -16,8 +16,9 @@ tags:
 > * 给body绑定mousewheel事件，如果当前是在目标元素，则阻止默认行为。缺点：不够优雅
 > * 给子元素mousewheel事件加上return false(兼容ie6)。缺点：无
 
-##第二种解决方案
 <!-- more -->
+
+##第二种解决方案
           
 ```javascript
 	var stopScroll = function(e){
