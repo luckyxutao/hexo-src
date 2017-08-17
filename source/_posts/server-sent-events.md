@@ -43,7 +43,7 @@ router.get('/stream', function(req, res, next) {
     res.write("data: " + (new Date()) + "\n\n");
 
     let interval = setInterval(function () {
-      // res.write("data: " + (new Date()) + "\n\n");
+      // res.write("data: " + (new Date()) + "\n\n"); 
       res.write("event:onTimeChanged\n");//自定义事件，client通过监听onTimeChanged来接收消息
       res.write(":This is a Comment\n");//注释
       let obj = {
