@@ -1,9 +1,9 @@
-title: server-sent-events
+title: HTML5协议之Server-Sent-Events
 date: 2017-08-17 10:46:45
 categories:
 - 协议
 tags:
-- sse http
+- html5 http
 ---
 
 **推荐一篇阮一峰老师的[server sent events](http://www.ruanyifeng.com/blog/2017/05/server-sent_events.html) **

@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: IT民工
-subtitle: 
-description:
-author: luckyxutao.资深前端工程师
+title: 志当存高远，望尽天涯路
+subtitle: 人生已如此艰难，就不要再拆穿了
+description: 
+author: luckyxutao•资深前端工程师
 email: 331502715@qq.com
 language: zh-CN
 
@@ -42,7 +42,9 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
+stylus:
+  compress: true
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
