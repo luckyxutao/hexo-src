@@ -17,26 +17,30 @@ tags:
         2.2.2 _updateDOMProperties
         2.2.3 _updateDOMChildren
             2.2.3.1 childrenArray
-                2.2.3.1.1  _reconcilerUpdateChildren
-                    * flattenChildren，将array变为对象，顺序与array一致
+                2.2.3.1.1  _reconcilerUpdateChildren(以删除第一条元素111为例)
+                    * flattenChildren，将array变为nextChildren对象，顺序与array一致(parseFloat key若为正整数则从小到大，其它按定义顺序)
                     *   prevChildren={.$111:nextElement111,.$222:nextElement222,.$333:nextElement333,.$444:nextElement444}
                         nextChildren = {.$222:nextElement222,.$333:nextElement333,.$444:nextElement444}, 
                     * 更新children->如果child不是array则直接更新，是array则递归
-                        * `循环nextChildren,根据nextChild的key(.$key)去prevChildren对像中查找实例，若找到合符合（shouldUpdateReactComponent）则使用该实例更新nextRenderedElement`
+                        * `循环nextChildren,根据nextChild的key(.$key)去prevChildren对像中查找实例，若找到合符合（shouldUpdateReactComponent）则使用该实例（DOM等）更新nextRenderedElement(数据)`
                         * 若不符合则根据renderedElement新建实例并mount，umount旧实例
                     * prevChildren有而nextChildren没有放到removedNodes数组
                 2.2.3.1.2  childrenDiff(元素已经更新完成),顺序尚未更新
-                    *   
-
+                    * 通过对比新旧元素得到要更新的步骤
+                    * 打补丁更新
             2.2.3.2 children不是Array
                 2.2.3.2.1  直接更新
     2.2 不能利用则根据nextRenderedElement创建新的实例
         2.2.1 umount之前组件
         2.2.2 创建新实例->mount->replace已有markup
 
+### tree diff时会同层复用
 
+### key用索引执行流程(删除111第1个元素)
+    `当前数据用前一条数据的组件，当然得更新DOM，但是因为索引和顺序是稳定的，顺序对比不用操作`
+![](/assets/blogImg/index_key.png)
 
-
-​	
-
-​	
+### key用id执行流程(删除111第1个元素)
+    `当前数据还用当前数据的组件，不需要更新DOM，但是在顺序调整等情况下是需要操作dom的（配例不需要）`
+![](/assets/blogImg/id_key.png)
+​
