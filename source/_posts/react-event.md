@@ -9,6 +9,8 @@ React基于虚拟DOM实现了一个合成事件层，我们所定义的事件处
     > * 抹平了浏览器差异
     > * 通过delegate优化了事件绑定
 <!-- more -->
+### 事件执行顺序
+    原生child->原生parent->原生document->合成事件捕获(parent-child)->合成事件冒泡(child-parent)
 ### 绑定过程
     1. 注入平台特定事件及组件
         * 注入事件plugins
@@ -40,3 +42,9 @@ React基于虚拟DOM实现了一个合成事件层，我们所定义的事件处
         * flushBatchedUpdates
             更新dirtyComponent里的state更新
         * batchingStrategy.isBatchingUpdates=false
+## 如何阻止原生事件冒泡
+    由于react事件是通过监听document来模拟的，因此直接stopPropagation只能阻止合成事件，阻止不了原生冒泡
+```javascript
+    e.nativeEvent.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation(); //阻止同级后续事件执行，并阻止冒泡
+```
