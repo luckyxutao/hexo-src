@@ -8,7 +8,11 @@ tags:
 ---
 ​    react日常开发过程中我们经常会遇到一些警告，如：Each child in an array or iterator should have a unique "key" prop。 为了省事我们通常会使用index作为key，警告不见了效果好像也没什么问题。但是真的没问题吗？
 ### demo对比差异
-​   左边是id作为key，右边索引做为key，可以看出dom操作是完全不一样的，id作为key则只是删除了第一个dom，索引则是所有dom都更新了222、333、444，为什么会这样呢？还要从react的更新流程说起，这里只讨论主流程
+>* 索引做为key
+![](/assets/blogImg/id_index.gif)
+>* id做为key
+​![](/assets/blogImg/id_unique.gif)
+    可以看出dom操作是完全不一样的，id作为key则只是删除了第一个dom，索引则是所有dom都更新了222、333、444，为什么会这样呢？还要从react的更新流程说起，这里只讨论主流程
 ### react更新流程
    1. instance._renderValidatedComponent（执行render方法)->得到nextRenderedElement
    2. 对比nextRenderedElement和prevRenderedElement是否可以复用(object类型type相等&&key相等)
