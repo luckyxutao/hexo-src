@@ -6,9 +6,9 @@
 title: 志当存高远，望尽天涯路
 subtitle: 人生已如此艰难，就不要再拆穿了
 description: 
-author: luckyxutao•资深前端工程师
+author: luckyxutao
 email: 331502715@qq.com
-language: zh-CN
+language: zh-Hans
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: BlueLake
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
