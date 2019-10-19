@@ -1,14 +1,40 @@
 ---
 title: react event
 date: 2019-10-16 09:09:39
+categories:
+- 前端
 tags:
+- react
+- 题
 ---
 ### 合成事件
 React基于虚拟DOM实现了一个合成事件层，我们所定义的事件处理器会接收到一个合成事件对象的实例，它完全符合 W3C 标准，不会存在任何IE标准的兼容问题。并且与原生浏览器具有一样的接口，同样支持事件冒泡机制，可用 stopPropagation() 和 preventDefault() 来中断它。所有事件都自动绑定在最外层上。如果需要访问原生事件对象，可以使用nativeEvent属性。
-    > * 抹平了平台差异
-    > * 抹平了浏览器差异
-    > * 通过delegate优化了事件绑定
 <!-- more -->
+### 主要特点
+* 抹平了平台差异
+* 抹平了浏览器差异
+* 通过delegate优化了事件绑定
+
+### 合成事件setState
++ `只有一个batchedUpdated更新(多个state合并在一个里)，setState本身是同步的`
++ 函数执行前isBatchingUpdates置为true
+    + listener函数执行（N次setState)，
+        + _pendingStateQueue
+        + dirtyComponents
++ 函数执行结束
+    + 执行flushBatchedUpdates(***可能有多次state更新***)
+    + isBatchingUpdates置为false
+
+### 非合成事件setState
++ `会有多个batchedUpdate(每个只有一个更新)`
++ 将一个更新也当作一次batchedUpdate更新(***只有本次state更新***)
+    + isBatchingUpdates置为true
+        + _pendingStateQueue
+        + dirtyComponents
+    + 事务结束
+        + 执行flushBatchedUpdates
+        + isBatchingUpdates置为false
+
 ### 事件执行顺序
     原生child->原生parent->原生document->合成事件捕获(parent-child)->合成事件冒泡(child-parent)
 ### 绑定过程
@@ -42,9 +68,12 @@ React基于虚拟DOM实现了一个合成事件层，我们所定义的事件处
         * flushBatchedUpdates
             更新dirtyComponent里的state更新
         * batchingStrategy.isBatchingUpdates=false
-## 如何阻止原生事件冒泡
+
+### 如何阻止原生事件冒泡
+
     由于react事件是通过监听document来模拟的，因此直接stopPropagation只能阻止合成事件，阻止不了原生冒泡
 ```javascript
+    e.stopPropagation()//只能阻止合成事件冒泡
     e.nativeEvent.stopPropagation();
     e.nativeEvent.stopImmediatePropagation(); //阻止同级后续事件执行，并阻止冒泡
 ```

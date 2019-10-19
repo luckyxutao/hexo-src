@@ -4,7 +4,9 @@ date: 2019-10-16 09:09:18
 categories:
 - 前端
 tags:
-- react 优化
+- react
+- 优化
+- 题
 ---
 ​    react日常开发过程中我们经常会遇到一些警告，如：Each child in an array or iterator should have a unique "key" prop。 为了省事我们通常会使用index作为key，警告不见了效果好像也没什么问题。但是真的没问题吗？
 <!-- more -->
