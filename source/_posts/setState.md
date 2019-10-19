@@ -10,7 +10,7 @@ tags:
 - 面试
 ---
 
-setState更新流程(如果不是batchedUpdate也会包装成一个)，[key索引与id区别](/2019/10/16/react-key使用index和id区别/)
+本文不讨论详细diff算法只关注setState更新流程(如果不是batchedUpdate也会包装成一个)，[key索引与id区别](/2019/10/16/react-key使用index和id区别/)
 <!-- more -->
 ### 相关事务
 + [***ReactDefaultBatchingStrategyTransaction***](#ReactDefaultBatchingStrategyTransaction)
@@ -20,10 +20,10 @@ setState更新流程(如果不是batchedUpdate也会包装成一个)，[key索�
 ### 更新主流程
 ```javascript
 + 将newState放入_pendingStateQueue
-  + ReactDefaultBatchingStrategyTransaction
+  + //`ReactDefaultBatchingStrategyTransaction`
 + 将要更新的实例放入dirtyComponents队列，并添加updateNumber
-  + ReactUpdatesFlushTransaction
-  + ReactReconcileTransaction
+  + //`ReactUpdatesFlushTransaction`
+  + //`ReactReconcileTransaction`
 + 循环处理dirtyComponents任务(flushBatchedUpdates)
 + updateComponent(inst)
   + `componentWillReceiveProps`
