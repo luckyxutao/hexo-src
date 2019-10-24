@@ -51,6 +51,13 @@ virtual dom（虚拟DOM）,也就是React.createElment函数返回的虚拟节�
 + 不同类型
     + 创建新实例，无复用逻辑
 
+### diff结果操作类型
+
+当节点处于同一层级时，React diff 提供了三种节点操作，分别为：INSERT_MARKUP（插入）、MOVE_EXISTING（移动）和 REMOVE_NODE（删除）。
++ INSERT_MARKUP，新的 component 类型不在老集合里， 即是全新的节点，需要对新节点执行插入操作。
++ MOVE_EXISTING，在老集合有新 component 类型，且 element 是可更新的类型，generateComponentChildren 已调用 receiveComponent，这种情况下 prevChild=nextChild，就需要做移动操作，可以复用以前的 DOM 节点。
++ REMOVE_NODE，老 component 类型，在新集合里也有，但对应的 element 不同则不能直接复用和更新，需要执行删除操作，或者老 component 不在新集合里的，也需要执行删除操作。
+
 ### treeDiff
 React 只会对相同颜色方框内的 DOM 节点进行[`比较`](#diff比较的是什么？)，即同一个父节点下的所有子节点。当发现节点已经不存在，则该节点及其子节点会被完全删除掉，不会用于进一步的比较。这样只需要对树进行一次遍历，便能完成整个 DOM 树的比较。
 ![](https://static001.infoq.cn/resource/image/1f/5a/1f522dc11891365ce77c7650f517495a.png)
@@ -63,7 +70,7 @@ D.append(A);
 ```
 ![](https://static001.infoq.cn/resource/image/e1/e3/e1a32e640909e276d6f9c6ac9c1da4e3.png)
 
-### childDiff(内容)
+### childrenDiff(内容)
 
 + _reconcilerUpdateChildren(改之前是1,2,3,4,之后是2,3,1,5)
     + flattenChildren(Array to Object`按定义顺序，仍然`[有序](/2019/10/19/for-in/))
@@ -116,4 +123,59 @@ D.append(A);
         .$4 : 'component实例(新建){data:5}',
     }
 ```
-### childDiff(顺序)
+
+### childrenDiff(顺序)
++ 元素(1和2)交换逻辑(1放2后)
+    + parentNode.insertBefore(1,`2的后一个节点(nextSibling)`)
++ 删除node([1,2,3,4]->[2,3,4])，旧的元素顺序无须调整，只需执行删除操作
+![](/assets/blogImg/children_remove.png)
++ 添加并且调整顺序[1,2,3,4]->[1,5,2,4,3]，移动操作都是`after操作`参考`lastPlacedNode`
+![](/assets/blogImg/children-insert.png)
++ 调整顺序[1,2,3,4]->[2,1,4,3]
+![](/assets/blogImg/children-sort.png)
+### diff源码
+```javascript
+      var updates = null;
+      var name; // `nextIndex` will increment for each child in `nextChildren`, but
+      // `lastIndex` will be the last index visited in `prevChildren`.
+
+      var nextIndex = 0;
+      var lastIndex = 0; // `nextMountIndex` will increment for each newly mounted child.
+
+      var nextMountIndex = 0;
+      var lastPlacedNode = null;
+
+      for (name in nextChildren) {
+        if (!nextChildren.hasOwnProperty(name)) {
+          continue;
+        }
+
+        var prevChild = prevChildren && prevChildren[name];
+        var nextChild = nextChildren[name];
+
+        if (prevChild === nextChild) {
+          updates = enqueue(updates, this.moveChild(prevChild, lastPlacedNode, nextIndex, lastIndex));
+          lastIndex = Math.max(prevChild._mountIndex, lastIndex);
+          prevChild._mountIndex = nextIndex;
+        } else {
+          if (prevChild) {
+            // Update `lastIndex` before `_mountIndex` gets unset by unmounting.
+            lastIndex = Math.max(prevChild._mountIndex, lastIndex); // The `removedNodes` loop below will actually remove the child.
+          } // The child must be instantiated before it's mounted.
+
+
+          updates = enqueue(updates, this._mountChildAtIndex(nextChild, mountImages[nextMountIndex], lastPlacedNode, nextIndex, transaction, context));
+          nextMountIndex++;
+        }
+
+        nextIndex++;
+        lastPlacedNode = ReactReconciler.getHostNode(nextChild);
+      } // Remove children that are no longer present.
+
+
+      for (name in removedNodes) {
+        if (removedNodes.hasOwnProperty(name)) {
+          updates = enqueue(updates, this._unmountChild(prevChildren[name], removedNodes[name]));
+        }
+      }
+```

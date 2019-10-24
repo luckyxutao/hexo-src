@@ -9,7 +9,7 @@ tags:
 ```shell
 brew install jenkins
 ```
-
+<!-- more -->
 ### 基本步骤
 
 1. 安装推荐的常用插件，主要有[Publish over SSH](https://wiki.jenkins.io/display/JENKINS/Publish+Over+SSH+Plugin)、[Github Plugin](https://wiki.jenkins.io/display/JENKINS/Github%20Plugin)、[NodeJS Plugin](https://wiki.jenkins.io/display/JENKINS/NodeJS+Plugin)
