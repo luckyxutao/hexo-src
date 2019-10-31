@@ -13,6 +13,8 @@ tags:
         + Accept:text/html 浏览器可接受服务器返回类型为text/html
         + Accept:*/* 浏览器可以处理所有类型
     2. Accept-Encoding
+    +  `If-None-Match`
+    +  `If-Mofified-Since`
         + 浏览器申明可以支持的编码方法，支持何种压缩方法(gzip、deflate)等，参见[`http压缩`](/2018/01/07/http压缩/)
     3. Connection
         + keep-alive  当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接。
@@ -34,11 +36,10 @@ tags:
     + set-cookie
         + httponly
     + 缓存想关
-        + Cache-Control
-        + date
-        + etag
-        + last-modified
-        + expires
+        + Cache-Control(max-age=86400)
+        + `etag`
+        + `last-modified`
+        + expires(http1.0)
     + status
         + 200
         + 404
