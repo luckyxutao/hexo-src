@@ -12,6 +12,7 @@ tags:
 React本身只是一个UI层，并不是Web应用的完整解决方案。没有解决`代码结构、组件之间通信、数据共享及职责划分`等问题，对于大型复杂应用来说恰恰是最关键的。Redux则跟MVC架构是同一类东西，统一了代码结构，使项目逻辑更加清晰、易维护。
 ### Action
 + Action是普通的plainObject，其中type属性是必须的。
+<!-- more -->
 ```javascript
 const action = {
   type: 'ADD_TODO',
@@ -22,7 +23,7 @@ const action = {
 ```javascript
 store.dispatch({type:'INCREMENT'})
 ```
-<!-- more -->
+
 ### ActionCreator
 View 要发送多少种消息，就会有多少种 Action。如果都手写，会很麻烦。可以定义一个函数来生成 Action，这个函数就叫 ActionCreator。
 ```javascript

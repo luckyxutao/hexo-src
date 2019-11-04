@@ -13,6 +13,8 @@ tags:
         + Accept:text/html 浏览器可接受服务器返回类型为text/html
         + Accept:*/* 浏览器可以处理所有类型
     2. Accept-Encoding
+    + content-type
+        application/json、application/x-www-form-urlencode等
     +  `If-None-Match`
     +  `If-Mofified-Since`
         + 浏览器申明可以支持的编码方法，支持何种压缩方法(gzip、deflate)等，参见[`http压缩`](/2018/01/07/http压缩/)
@@ -20,8 +22,6 @@ tags:
         + keep-alive  当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，如果客户端再次访问这个服务器上的网页，会继续使用这一条已经建立的连接。
         + close 代表一个Request完成后，客户端和服务器之间用于传输HTTP数据的TCP连接会关闭， 当客户端再次发送Request，需要重新建立TCP连接。
     4. User-Agent
-    5. Cache-Control
-        + 参见[`http缓存`](/2018/01/07/http缓存/)
     6. Cookie
     7. Referer
     8. Host
@@ -33,6 +33,8 @@ tags:
     + content-length
     + content-encoding
     + content-type
+    + Cache-Control
+        + 参见[`http缓存`](/2018/01/07/http缓存/)
     + set-cookie
         + httponly
     + 缓存想关
