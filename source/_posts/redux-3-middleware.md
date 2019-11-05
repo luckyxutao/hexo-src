@@ -16,9 +16,12 @@ tags:
 这是 redux 作者 Dan 对 middleware 的描述，middleware 提供了一个分类处理 action 的机会，在 middleware 中你可以检阅每一个流过的 action，挑选出特定类型的 action 进行相应操作，给你一次改变 action 的机会。
 <!-- more -->
 
-### 中间件是什么
+### 是什么
++ 给使用者提供了一种可以组合、自由插拔的插件机制来增强和扩展redux
++ 通过对`dispatch包装`可以拦截所有dispatch的action，以方便增加逻辑
++ 是一个增强版的store
 ![](/assets/blogImg/redux-middleware-2.png)
-不用中间件的redux只是一个单纯的的本地状态管理器,假设我们想在所有dispatch触发时拦截做些特殊处理，是很难做到的也不优雅,如：打印日志
+假设我们想在所有dispatch触发时拦截做些特殊处理，是很难做到的也不优雅,如：打印日志
 ```javascript
 let store = createStore(reducer);
 let dispatch = store.dispatch;
@@ -31,8 +34,7 @@ export default store;
 ```
 如果需要打印每一个 action 信息用来调试，就得去改 dispatch 或者 reducer 代码，使其具有打印日志的功能。又比如点击 button 后，需要先去服务器请求数据，只有等拿到数据后，才能dispatch更新到store以重新渲染 view，此时我们又希望 dispatch 或者 reducer 拥有异步请求的功能等等。。。
 面对多种多样的业务需求，`单纯的修改 dispatch 或 reducer 的代码显然不具有普世性，我们需要的是可以组合的，自由插拔的插件机制`，所以 redux 的 middleware 是为了`增强 dispatch 而出现的`,是一个`enhance的store`。
-
-### 理解middleware原理
+### 实现
 总共分四步，[`middleware源码`](#source-middleware)
 + 根据参数创建store，拿到原始getState和dispatch
 + 给 middleware分发 store
