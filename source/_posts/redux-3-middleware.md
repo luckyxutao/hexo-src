@@ -21,6 +21,7 @@ tags:
 + 通过对`dispatch包装`可以拦截所有dispatch的action，以方便增加逻辑
 + 是一个增强版的store
 ![](/assets/blogImg/redux-middleware-2.png)
+
 假设我们想在所有dispatch触发时拦截做些特殊处理，是很难做到的也不优雅,如：打印日志
 ```javascript
 let store = createStore(reducer);
