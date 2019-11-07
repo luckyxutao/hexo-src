@@ -15,6 +15,12 @@ tags:
 
 
 <!-- more -->
+
+### 缓存请求指令
+客户端可以在HTTP请求中使用的标准 Cache-Control 指令。
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+### 缓存响应指令
+服务器可以在响应中使用的标准 Cache-Control 指令。
 ### nginx缓存配置 ###
 ![](/assets/blogImg/缓存.png)
 ![](/assets/blogImg/协商缓存.png)
