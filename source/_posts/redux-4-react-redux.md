@@ -2,7 +2,7 @@
 title: react-redux
 date: 2019-11-06 08:42:29
 categories:
-- 前端
+- react
 tags:
 - redux
 - react-redux

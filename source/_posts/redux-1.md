@@ -2,7 +2,7 @@
 title: redux入门介绍
 date: 2019-11-03 17:28:26
 categories:
-- 前端
+- react
 tags:
 - redux
 - 题

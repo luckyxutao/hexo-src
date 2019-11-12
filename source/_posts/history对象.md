@@ -2,7 +2,7 @@
 title: history与react-router
 date: 2019-10-31 08:40:49
 categories:
-- 前端
+- react
 tags:
 - history
 - react

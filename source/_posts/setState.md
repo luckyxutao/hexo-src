@@ -2,7 +2,7 @@
 title: setState更新流程
 date: 2019-10-18 09:11:19
 categories:
-- 前端
+- react
 tags:
 - react
 - 题

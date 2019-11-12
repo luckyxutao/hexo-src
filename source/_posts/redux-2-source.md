@@ -2,7 +2,7 @@
 title: redux原理学习
 date: 2019-11-04 08:55:46
 categories:
-- 前端
+- react
 tags:
 - redux
 - 原理

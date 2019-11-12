@@ -2,7 +2,7 @@
 title: react event
 date: 2019-10-16 09:09:39
 categories:
-- 前端
+- react
 tags:
 - react
 - 题

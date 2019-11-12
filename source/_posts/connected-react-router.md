@@ -2,7 +2,7 @@
 title: connected-react-router
 date: 2019-11-08 09:04:24
 categories:
-- 前端
+- react
 tags:
 - router
 - react
@@ -11,6 +11,7 @@ tags:
 ---
 ### What
 > A Redux binding for React Router v4 and v5
+<!-- more -->
 
 ### 核心原理
 将router的操作交由redux管理，路由作为redux的一部分

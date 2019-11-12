@@ -2,7 +2,7 @@
 title: react-diff
 date: 2019-10-19 17:22:04
 categories:
-- 前端
+- react
 tags:
 - react
 - 题

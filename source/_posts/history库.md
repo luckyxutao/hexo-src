@@ -2,7 +2,7 @@
 title: history库
 date: 2019-11-09 18:23:10
 categories:
-- 前端
+- react
 tags:
 - router
 - history
@@ -11,6 +11,7 @@ tags:
 ### What?
 通过对浏览器内置的History及API进行封装，使操作history更统一(`Hash，H5 API等`)、方便切换。
 > The history library is a lightweight layer over browsers' built-in History and Location APIs. The goal is not to provide a full implementation of these APIs, but rather to make it easy for users to opt-in to different methods of navigation.
+
 <!-- more -->
 
 ### History分类
