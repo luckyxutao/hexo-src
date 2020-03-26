@@ -7,8 +7,9 @@ tags:
 - promise
 - 题
 ---
-
+手动实现了符合promiseA+规范的promise库
 <!-- more -->
+
 ```javascript
 function Promise(executor){
     let self = this;
