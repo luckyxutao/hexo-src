@@ -11,7 +11,8 @@ tags:
 ### cookie 和 token 都存放在 header 中，为什么不会劫持 token？
 + 首先token不是防止XSS的，而是为了防止CSRF的；
 + CSRF攻击的原因是浏览器会自动带上cookie，而浏览器`不会自动`在`header或url里`带上token
- <!-- more -->
+
+<!-- more -->
 
 ### CSRF攻击是什么
 CSRF是跨站请求伪造的缩写，也被称为XSRF， 是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。
