@@ -231,7 +231,7 @@ export default [{
 * koa承担server服务
 * react-router-config的matchRoutes来做路由匹配及渲染
 * 匹配成功的路由会调组件外挂getInitialProps静态方法
-
+* 通过`koa-proxy`进行了部分接口转发，避免了跨域问题
 ```javascript
 import React from 'react';
 import { StaticRouter} from 'react-router-dom';
