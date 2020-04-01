@@ -11,7 +11,8 @@ tags:
 * 首先，不配置这两个属性你引入的模块还是会被打包。
 * 但是，很多第三方模块是不需要再被处理的，比如jQuery,不需要再被babel处理，因为jQuery已经是es5，浏览器直接可以识别。这个时候，你不设置exclude，jQuery就会被处理，这样就增加了打包时间。
 * 所以，设置好exclude和include可以优化打包时间。
-
+### babel-plugin-import
+实现模块按需加载、而不是引一个模块将整个库打包进来
 ### scope-hoisting
 Scope Hoisting 它可以让webpack打包出来的代码文件更小，运行更快，它可以被称作为 "作用域提升"。是在webpack3中提出来的，当然现在webpack4也是支持的。
 * 代码体积更小，因为函数申明语句会产生大量代码；
