@@ -4,7 +4,7 @@ date: 2020-01-02 13:46:42
 categories:
 - 基础
 tags:
-- 基础
+- implement
 ---
 
 instanceof for testing object instance, `cannot test primitive type`
