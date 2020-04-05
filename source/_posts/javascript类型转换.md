@@ -2,7 +2,7 @@
 title: javascript类型转换
 date: 2019-10-21 08:48:53
 categories:
-- 前端
+- 基础
 tags:
 - 基础
 - 题

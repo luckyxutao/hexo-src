@@ -2,7 +2,7 @@
 title: javascript小数相乘
 date: 2016-11-03 17:25:03
 categories:
-- 题
+- 基础
 tags:
 - 算法
 - 题

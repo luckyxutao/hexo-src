@@ -2,7 +2,7 @@
 title: 常见http头
 date: 2019-10-28 20:24:05
 categories:
-- 前端
+- 基础
 tags:
 - http
 - 题

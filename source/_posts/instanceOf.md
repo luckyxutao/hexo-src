@@ -2,7 +2,7 @@
 title: instanceof关键字
 date: 2020-01-02 13:46:42
 categories:
-- 前端
+- 基础
 tags:
 - 基础
 ---
