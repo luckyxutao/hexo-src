@@ -2,7 +2,7 @@
 title: 整数相加求和
 date: 2019-01-03 17:28:26
 categories:
-- 题
+- 算法
 tags:
 - 算法
 - 题

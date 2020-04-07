@@ -2,9 +2,9 @@
 title: array-rotate
 date: 2019-01-07 16:28:15
 categories:
-- 基础
-tags:
 - 算法
+tags:
+- 基础
 - leetcode
 ---
 
