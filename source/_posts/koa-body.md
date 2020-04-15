@@ -18,7 +18,7 @@ tags:
 1. 取到req.headers['content-type']，值为`application/x-www-form-urlencoded`或`application/json`
 2. `x-www-form-urlencoded`对应的格式为`a=1&b=2`, json则是json对象
 3. 通过`监听ctx.req对象的data和end事件`接收data数据
-4. 按对应格式方式解析成json对象
+4. 按对应格式方式解析成json对象放到request.body
 
 ### 模拟实现
 ```javascript
