@@ -10,7 +10,7 @@ tags:
 ---
 
 ### 结论
-当对比的类型为Object的时候并且key的长度相等的时候，浅比较也仅仅是用Object.is()对Object的value做了一个基本数据类型的比较，所以如果key里面是对象的话，有可能出现`比较不符合预期`的情况，所以`浅比较是不适用于嵌套类型的比较`的。
+当对比的类型为Object的时候并且key的长度相等的时候，浅比较也仅仅是用Object.is()对Object的value做了一个`基本数据类型的比较`，所以如果key里面是对象的话，有可能出现`比较不符合预期`的情况，所以`浅比较是不适用于嵌套类型的比较`的。
 
 <!-- more -->
 
@@ -46,6 +46,16 @@ console.log(shallowEqual(a,b)) // false
     * 相比deepEqual范围小，某些情况下deepEqual是true而shallowEqual是false
 
 ```javascript
+/*
+import { shallowEqualArrays } from "shallow-equal";
+ 
+shallowEqualArrays([1, 2, 3], [1, 2, 3]); // => true
+shallowEqualArrays([{ a: 5 }], [{ a: 5 }]); // => false
+import { shallowEqualObjects } from "shallow-equal";
+ 
+shallowEqualObjects({ a: 5, b: "abc" }, { a: 5, b: "abc" }); // => true
+shallowEqualObjects({ a: 5, b: {} }, { a: 5, b: {} }); // => false
+*/
 /**
  *  1. 只比较一层
  *  2. 比较都是绝对相等
