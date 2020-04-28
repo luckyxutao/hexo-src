@@ -10,8 +10,14 @@ tags:
 - 面试
 ---
 
+
 本文不讨论详细diff算法只关注setState更新流程(如果不是batchedUpdate也会包装成一个)，[key索引与id区别](/2019/10/16/react-key使用index和id区别/)
 <!-- more -->
+
+### 流程图
+
+![](https://s1.ax1x.com/2020/04/28/JI7Ct0.png)
+
 ### 相关事务
 + [***ReactDefaultBatchingStrategyTransaction***](#ReactDefaultBatchingStrategyTransaction)
 + [***ReactUpdatesFlushTransaction***](#ReactUpdatesFlushTransaction)
