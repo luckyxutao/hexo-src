@@ -16,7 +16,7 @@ tags:
 
 ### 流程图
 
-![](https://s1.ax1x.com/2020/04/28/JI7Ct0.png)
+![](https://s1.ax1x.com/2020/04/29/JoQ8BT.png)
 
 ### 相关事务
 + [***ReactDefaultBatchingStrategyTransaction***](#ReactDefaultBatchingStrategyTransaction)
