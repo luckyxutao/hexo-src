@@ -11,7 +11,7 @@ tags:
 
 ### 位操作基础
 [`异或操作基础`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR)
-
+<!-- more -->
 * 如果我们对 0 和二进制位做 XOR 运算，得到的仍然是这个二进制位
 a ⊕ 0 = a
 
