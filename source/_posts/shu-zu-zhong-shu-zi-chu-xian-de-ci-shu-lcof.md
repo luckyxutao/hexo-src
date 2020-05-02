@@ -2,9 +2,9 @@
 title: 位操作基础
 date: 2020-03-23 13:32:54
 categories:
-- leetcode
-tags:
 - 算法
+tags:
+- leetcode
 - 位运算
 - 题
 ---
