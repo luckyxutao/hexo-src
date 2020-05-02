@@ -1,5 +1,5 @@
 ---
-title: 数组中数字出现的次数
+title: 位操作基础
 date: 2020-03-23 13:32:54
 categories:
 - leetcode
@@ -81,6 +81,8 @@ var singleNumber = function(nums) {
     return a;
 };
 ```
+### [不用加减乘除做加法](/2020/04/01/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/)
+
 ### [数组中数字出现的次数](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
 一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。
 [`官方题解`](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-by-leetcode/)

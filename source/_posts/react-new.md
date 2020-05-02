@@ -33,7 +33,7 @@ tags:
 ```
 * instance
 平时我们写的`class/函数`组件的实例，包含生命周期等
-state/props变化后，触发更新逻辑
+state/props变化后，触发更新逻辑 
 ```javascript
 instance = new Counter();
 Counter.getDerivedStateFromProps();
