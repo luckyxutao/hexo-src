@@ -2,7 +2,6 @@ title: document.referrer获取来源
 date: 2016-07-20 11:22:16
 categories:
 - 前端
-- javascript
 ---
 
 

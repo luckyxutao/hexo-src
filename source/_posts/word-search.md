@@ -5,7 +5,7 @@ categories:
 - 算法
 tags:
 - leetcode
-- 栈
+- 回溯
 - 题
 ---
 
