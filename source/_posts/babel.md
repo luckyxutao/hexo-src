@@ -2,7 +2,7 @@
 title: babel介绍与使用
 date: 2019-11-25 21:33:14
 categories:
-- 优化
+- webpack
 tags:
 - babel
 - webpack
