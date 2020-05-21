@@ -38,5 +38,5 @@ tags:
 }
 ```
 * 根据chunks生成文件
-    * [mainTemplate](https://github.com/luckyxutao/2020-learning/blob/master/webpack/webpack-lazyload/zfpack-template-main.ejs)
-    * [chunkTemplate](https://github.com/luckyxutao/2020-learning/blob/master/webpack/webpack-lazyload/zfpack-template-chunk.ejs)
+    * [mainTemplate](https://github.com/luckyxutao/2020-learning/blob/master/webpack/webpack-lazyload/zfpack-template-main.ejs)  (默认chunks,同步引用)
+    * [chunkTemplate](https://github.com/luckyxutao/2020-learning/blob/master/webpack/webpack-lazyload/zfpack-template-chunk.ejs) (异步模块使用)
