@@ -1,7 +1,10 @@
 ---
 title: webpack常用优化
 date: 2020-03-26 18:46:47
+categories:
+- webpack
 tags:
+- 优化
 ---
 
 ### 第三方库处理-externals
