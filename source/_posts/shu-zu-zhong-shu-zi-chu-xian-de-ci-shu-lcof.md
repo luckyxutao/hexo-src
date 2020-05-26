@@ -24,6 +24,21 @@ a ⊕ b ⊕ a = (a ⊕ a) ⊕ b = 0 ⊕ b = b
 ### 异或运算符优先级
 * 位操作符是`低于`比较运算符(===)的，因此(a &b ) === c
 
+### 二进制转10进制
+```js
+let str = '01010'
+let mask = 1;
+let i = 0;
+let num = 0;
+while(i<str.length){
+    let cur = str.charAt(i);
+    if(cur === '1'){
+        num = num + mask;
+    }
+    mask<<=1;
+    i++;
+}
+```
 ### 左移
 
 ```javascript
@@ -31,6 +46,8 @@ let h = 1; //000001->1
 h<<=1;     //000010->2
 h<<=1;     //000100->4
 ```
+### 测试number二进制中某位是否是1
+number与1(1),2(2),8(3),16(4),32(5)按位与，为0则该位是0，否则是1
 
 ### 两个number某个二进位是否相等
 直接与001,010,100,1000,10000...进行[`按位与`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)操作即可，因为其它位全是0，只看1所在位
