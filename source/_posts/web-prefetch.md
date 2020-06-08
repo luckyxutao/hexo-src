@@ -1,7 +1,11 @@
 ---
 title: 使用web预加载技术优化你的应用
 date: 2020-05-09 07:08:39
+categories:
+- webpack
 tags:
+- 优化
+- 原理
 ---
 
 ### preload
