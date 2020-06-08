@@ -24,6 +24,7 @@ tags:
 ### 优化代码
 * [splitChunks](https://github.com/wayou/wayou.github.io/issues/40)
 * 代码分割
+* contentHash长缓存
 * prefetch
 * css/js压缩
 * 文件放入cdn

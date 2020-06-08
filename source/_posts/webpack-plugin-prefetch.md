@@ -15,8 +15,8 @@ tags:
 
 总之:在闲置时获取资源
 ```html
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="main.js" as="script">
+  <link rel="prefetch" href="style.css" as="style">
+  <link rel="prefetch" href="main.js" as="script">
 ```
 <!-- more -->
 
@@ -63,7 +63,7 @@ class PrefetchPlugin {
                                     tagName: 'link',
                                     voidTag: false,
                                     attributes: {
-                                        rel: 'preload',
+                                        rel: 'prefetch',
                                         href: file,
                                         as: 'script'
                                     }
