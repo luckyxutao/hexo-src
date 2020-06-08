@@ -25,10 +25,9 @@ tags:
 * [splitChunks](https://github.com/wayou/wayou.github.io/issues/40)
 * 代码分割
 * contentHash长缓存
-* prefetch
-* css/js压缩
-* 文件放入cdn
-* postcss去重，去掉无用css
+* prefetch/preload
+* css/js压缩，postcss去重，去掉无用css
+* 文件放入cdn(多域名)
 * tree-shaking
   * es6模块导入，静态，不能是require
 
