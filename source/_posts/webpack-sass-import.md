@@ -59,6 +59,7 @@ ModuleNotFoundError: Module not found: Error: Can't resolve '../../assets/down_b
 ```
 
 ### 根本原因
+[`Problems with url(...)`](https://webpack.js.org/loaders/sass-loader/#problems-with-url)
 1. sass-loader及sass预处理器`未能正确`处理@import依赖里`相对路径`
 2. 只是机械的将依赖资源合并到当前文件，@import替换为了require
 3. 以上操作会导致后期webapck在处理路径时发生错位
