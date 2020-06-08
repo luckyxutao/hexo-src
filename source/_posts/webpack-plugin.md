@@ -1,7 +1,11 @@
 ---
 title: weback插件系统学习
 date: 2020-06-07 20:56:43
+categories:
+- webpack
 tags:
+- loader
+- 原理
 ---
 ### 为什么要学习插件？
 * webpack基础配置无法满足需求

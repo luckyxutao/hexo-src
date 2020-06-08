@@ -7,6 +7,31 @@ tags:
 - 优化
 ---
 
+### 如何加快构建速度
+* 通过externals配置来提取常用库
+* 利用DllPlugin和DllReferencePlugin预编译资源模块 
+* HappyPack它把任务分解给多个子进程去并发的执行，子进程处理完后再把结果发送给主进程。
+* 缩小范围
+    * module.rules
+        * exclude、include
+    * resolve.modules
+        默认是当前目录下的node_modules，而依赖库却在项目根目录下的node_modules
+    * resolve.mainFields
+    * resolve.extension
+        extensions默认是[js,json]
+* babel-plugin-import
+
+### 优化代码
+* [splitChunks](https://github.com/wayou/wayou.github.io/issues/40)
+* 代码分割
+* prefetch
+* css/js压缩
+* 文件放入cdn
+* postcss去重，去掉无用css
+* tree-shaking
+  * es6模块导入，静态，不能是require
+
+
 ### 第三方库处理-externals
 防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。[`参见externals`](http://webpack.docschina.org/configuration/externals/)
 <!-- more -->
@@ -14,6 +39,7 @@ tags:
 * 首先，不配置这两个属性你引入的模块还是会被打包。
 * 但是，很多第三方模块是不需要再被处理的，比如jQuery,不需要再被babel处理，因为jQuery已经是es5，浏览器直接可以识别。这个时候，你不设置exclude，jQuery就会被处理，这样就增加了打包时间。
 * 所以，设置好exclude和include可以优化打包时间。
+
 ### babel-plugin-import
 实现模块按需加载、而不是引一个模块将整个库打包进来
 ### scope-hoisting
