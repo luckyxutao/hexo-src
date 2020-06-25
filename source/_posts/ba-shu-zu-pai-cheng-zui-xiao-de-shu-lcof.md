@@ -6,7 +6,6 @@ categories:
 tags:
 - leetcode
 - 栈
-- 题
 ---
 
 ### [说明](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)

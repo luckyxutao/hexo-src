@@ -6,7 +6,6 @@ categories:
 tags:
 - leetcode
 - 回溯
-- 题
 ---
 
 ### [说明](https://leetcode-cn.com/problems/word-search/)

@@ -6,7 +6,6 @@ categories:
 tags:
 - leetcode
 - 位运算
-- 题
 ---
 
 ### 位操作基础

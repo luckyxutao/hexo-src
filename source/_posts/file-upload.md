@@ -9,7 +9,7 @@ tags:
 
 ### Blob 对象
 Blob（Binary Large Object）对象代表了一段二进制数据。其它操作二进制数据的接口都是建立在此对象的基础之上。生产Blob对象的方法：1.使用Blob 构造函数，2.对已有的Blob对象slice方法切割成小部分，应用场景有：大文件的断点续传。
-
+<!-- more -->
 ### 前端切割文件
 file对象继承自Blob对象，通过slice方法可以完成文件分割
 * 每个10M
@@ -89,4 +89,4 @@ function createChunks(file: File): Part[] {
 * 过滤partList
     * 服务器缺失的需要上传
     * 服务器片断size小于实际size的，也需要重新上传
-* 通知server可以合并文件
+* 通知server合并文件

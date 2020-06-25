@@ -5,7 +5,6 @@ categories:
 - 算法
 tags:
 - leetcode
-- 题
 ---
 
 ### [说明](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
