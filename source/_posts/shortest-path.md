@@ -10,6 +10,7 @@ tags:
 
 ### D3最短路径
 * [Dijkstra on node-link diagram](https://bl.ocks.org/fabiovalse/03d07b071257987add9a7ba28a4befb5)
+
 <!-- more -->
 
 ### dijistra算法
@@ -22,3 +23,10 @@ tags:
 ### 多条相同路径(基于dijkstra)
 * https://www.mmuaa.com/post/8a34f8ee19456510.html
 * https://blog.csdn.net/liu16659/article/details/90180469
+
+### 求路径策略
+* 给每幅图生成一个graphId
+* 以graphId为键，存储dijistra计算结果(中心点到所有节点最短路径)->前驱数组
+    * 如果graphId计算过则走缓存，否则重新计算路径
+* 通过前驱列表，回溯查找某个节点最短路径nodeIds
+* 根据节点路径nodeIds求得linkIds
