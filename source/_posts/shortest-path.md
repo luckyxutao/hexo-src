@@ -30,3 +30,6 @@ tags:
     * 如果graphId计算过则走缓存，否则重新计算路径
 * 通过前驱列表，回溯查找某个节点最短路径nodeIds
 * 根据节点路径nodeIds求得linkIds
+
+### D3渲染路径
+* 渲染节点或边时，判断当前id是否在shortest_path_ids数据里
